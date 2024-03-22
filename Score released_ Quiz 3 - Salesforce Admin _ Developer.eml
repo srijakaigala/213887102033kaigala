@@ -1,0 +1,142 @@
+Delivered-To: srijakaigala@gmail.com
+Received: by 2002:a05:6402:1016:b0:568:4e95:f62b with SMTP id c22csp2054729edu;
+        Wed, 13 Mar 2024 05:20:16 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IF6m/HGdgkZ9gvZpgxo8rFD377ieg6avRC1XbPRAPTduqzB8lrl8tHskHD5Mnfj/LhTHYIe
+X-Received: by 2002:a25:a541:0:b0:dcd:8a5:d5b8 with SMTP id h59-20020a25a541000000b00dcd08a5d5b8mr2384829ybi.49.1710332416723;
+        Wed, 13 Mar 2024 05:20:16 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1710332416; cv=none;
+        d=google.com; s=arc-20160816;
+        b=xpQJ5NWFW3ezm4nIhVUSWqyuV7Z1mVC30XeRrlEQc8KCGrmBF0Vooh4NA78qrWSN/1
+         8B8sqJO2n9BLXQZ/VyPfB3//kf+IIlfqpitWuZP6rTXpcw+DolHCxW20TMOuhmIECCGI
+         fc+OBXnTTG71E5PWy9Mgy+XeS5FqsQfO8IVtB8ko3gmXmIki6hmneR/JH+yJr+kWLkOA
+         Xht6N9rKiujqkvVoLqH32BJntZwE+pNLFwCbign9QskG8zRW1QY5SUlL/GgsEtLB4c5c
+         u12HUXLik/Ilioef22tMuYX8V62RCmFRJtOw/HkBr2BtYw6ehOeuuaxoYU+VOxI+vEZy
+         oSnw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:from:subject:date:message-id:feedback-id:mime-version
+         :dkim-signature;
+        bh=FDYbM5nVqS/Za2hn33T2C+tlL0NkRdVA2SLkF8Lt5wc=;
+        fh=Xzt2G/1vklCMzx55ZEX8l7RBmOM2JZNRtB0/4BvaA40=;
+        b=ZTXlAZyMrVtZnD4w3O1G5mVjmsFOBwPRxCjvewu2WbJ2GWACUyiwavWDgrkW4oJH1u
+         En6Qjyewc1WpkFqo8aIhFbjPIVtlZ3/qFsMXNWwZ+f/+v3A3cbU6/mSJCpE+UQEGHNdt
+         4eKNa7fLTyjANPJXQokNOSoZJyYtRFrxvXWkW72wka/z7z20/S0dO65xrXOg/m/n+LAK
+         20oGNOLRGCl94qZ2ViQdbNv3DatA4m9zNYtuLhZzTpUvD942B606j2Pd08GLX3zWCWMG
+         wxsQRRJzsIonRQ4tkCoNbeW4666uFLNCGnO07iC66E6fU8BdCvJWfaji4phLvuAemqnp
+         hOSA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@thesmartbridge.com header.s=google header.b=ZHIIkcuN;
+       spf=pass (google.com: domain of 3_5nxzqssddaemzpqqbzmuwftqeymdfndupsq.oayeduvmwmusmxmsymux.oay@trix.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3_5nxZQsSDDAeMZPQQbZMUWfTQeYMdfNdUPSQ.OaYedUVMWMUSMXMSYMUX.OaY@trix.bounces.google.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=thesmartbridge.com
+Return-Path: <3_5nxZQsSDDAeMZPQQbZMUWfTQeYMdfNdUPSQ.OaYedUVMWMUSMXMSYMUX.OaY@trix.bounces.google.com>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id t4-20020a254604000000b00dcde0674558sor2923773yba.5.2024.03.13.05.20.16
+        for <srijakaigala@gmail.com>
+        (Google Transport Security);
+        Wed, 13 Mar 2024 05:20:16 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 3_5nxzqssddaemzpqqbzmuwftqeymdfndupsq.oayeduvmwmusmxmsymux.oay@trix.bounces.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@thesmartbridge.com header.s=google header.b=ZHIIkcuN;
+       spf=pass (google.com: domain of 3_5nxzqssddaemzpqqbzmuwftqeymdfndupsq.oayeduvmwmusmxmsymux.oay@trix.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3_5nxZQsSDDAeMZPQQbZMUWfTQeYMdfNdUPSQ.OaYedUVMWMUSMXMSYMUX.OaY@trix.bounces.google.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=thesmartbridge.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=thesmartbridge.com; s=google; t=1710332416; x=1710937216; dara=google.com;
+        h=to:from:subject:date:message-id:feedback-id:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=FDYbM5nVqS/Za2hn33T2C+tlL0NkRdVA2SLkF8Lt5wc=;
+        b=ZHIIkcuNz19cQKFGmRkqkOsQxJBh8+YJGDiZE3XvyYAAImWRycRtIeodBaQIx1F6XR
+         woZf/zUHSWgg+Cf2L4yUlOultoIw0eYgtu6K96A57Qd8w5bDDr+PieJnRzEOf/uQpmjA
+         E0NeJVcnNVnh2ahT5LcCv+m6x8S61qvNLc0WU=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1710332416; x=1710937216;
+        h=to:from:subject:date:message-id:feedback-id:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=FDYbM5nVqS/Za2hn33T2C+tlL0NkRdVA2SLkF8Lt5wc=;
+        b=k3a31XkdEwpigDPbOoPWwousvL9ZQ7KuMDwWHLC1Su2/T3UrZzmsRDvMCkgqR6DKHe
+         6MVn1IBqLVHOzbKIK6cppk7ZzQQ34rbULPIQqVg8hlO0ypnKYj55uAHiw0l7YvDxsKLe
+         tUb9/n4yWi0Ydrm5r3/h4TgSUBQk4VdElL4JR2XPllO8cZHr6PR2ePL+toaqGRcZJ0tC
+         FIRPSP5WEnQA4fKJLPDQuXbgjwHWzFb96k0cUl5RPRw8wJUYT6tQm6J/lc8j9RREzpL2
+         ErFGCAV9qtsLDAri87KDvgUei7UOxXoqqxc4eh+JCQNt7NGY3Hc49RYy/PKMunPiG4/y
+         1lWw==
+X-Gm-Message-State: AOJu0YyvpcVByu9z9tkJY1fAjg5anH28e/GxTMn4yatLO3SDLaAwXBid
+	NsjAh5U/9fDmv8IZTVHjqCcGpMSqhiaI4Tarj1bcPf985O4KEXTY5rLZqh74OyeQalvO/oOgcyT
+	Y+JsZsrYw7/OswHpPOOAaE3qqFjn5MZEhOr6A2i//hg==
+MIME-Version: 1.0
+X-Received: by 2002:a25:ae84:0:b0:dcb:fe58:a08b with SMTP id
+ b4-20020a25ae84000000b00dcbfe58a08bmt2282266ybj.15.1710332415818; Wed, 13 Mar
+ 2024 05:20:15 -0700 (PDT)
+Feedback-ID: MailTypeReleaseScore:GoogleForms
+X-GoogleForms-FormId: e/1FAIpQLSeSJutzygpACPOTxin5HRkCsAGJ_Wcw2AtEetIkB-HSla8clA
+X-GoogleForms-CustomerDisplayName: thesmartbridge
+Message-ID: <autogen-java-ad9fcc17-4e06-40fb-ba5a-7171e5e739df@google.com>
+Date: Wed, 13 Mar 2024 12:20:16 +0000
+Subject: Score released: Quiz 3 - Salesforce Admin / Developer 
+From: sandeepnaik@thesmartbridge.com
+To: srijakaigala@gmail.com
+Content-Type: multipart/alternative; boundary="00000000000021b350061389cc98"
+
+--00000000000021b350061389cc98
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+
+Google Forms
+
+
+Your score has been released for Quiz 3 - Salesforce Admin / Developer.
+
+
+
+
+
+Quiz 3 - Salesforce Admin / Developer
+
+10 / 15
+
+
+
+
+
+
+View
+
+
+
+--00000000000021b350061389cc98
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><body style=3D"font-family: Roboto,Helvetica,Arial,sans-serif; margin=
+: 0; padding: 0; height: 100%; width: 100%;"><table border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" style=3D"background-color:;" width=3D"100%" role=
+=3D"presentation"><tbody><tr height=3D"64px"><td style=3D"padding: 0 24px;"=
+><img alt=3D"Google Forms" height=3D"26px" style=3D"display: inline-block; =
+margin: 0; vertical-align: middle;" width=3D"143px" src=3D"https://www.gsta=
+tic.com/docs/forms/google_forms_logo_lockup_white_2x.png"></td></tr></tbody=
+></table><div style=3D"padding: 24px; background-color:rgb(237,231,246)"><d=
+iv align=3D"center" style=3D"background-color: #fff; border-bottom: 1px sol=
+id #e0e0e0;margin: 0 auto; max-width: 480px; min-width: 154px;padding: 0 24=
+px;"><table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" style=3D"b=
+ackground-color: #fff;" width=3D"100%" role=3D"presentation"><tbody><tr hei=
+ght=3D"24px"></tr><tr><td><div style=3D"color: #424242; font-size: 13px; fo=
+nt-weight: 700; line-height: 13px;">Your score has been released for Quiz 3=
+ - Salesforce Admin / Developer.</div></td></tr><tr height=3D"24px"></tr><t=
+r><td><div style=3D"color: #424242; font-size: 16px; line-height: 16px; pad=
+ding-bottom: 8px;">Quiz 3 - Salesforce Admin / Developer</div><div style=3D=
+"color: rgb(103,58,183); font-size: 24px; line-height: 24px;"><span style=
+=3D"font-weight: bold;">10</span> / 15</div></td></tr><tr height=3D"24px"><=
+/tr><tr><td><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%"><tbody><tr><td><a href=3D"https://docs.google.com/forms/u/0/d/e/1=
+FAIpQLSeSJutzygpACPOTxin5HRkCsAGJ_Wcw2AtEetIkB-HSla8clA/viewscore?vc=3D0&c=
+=3D0&w=3D1&flr=3D0&viewscore=3DAE0zAgCfn7V3ha7SFPlUoS03rM4bWW0aJUarMNiE5k3r=
+VnF4If0UbTtzeF7EByu4DQ" style=3D"border-radius: 3px; box-sizing: border-box=
+; display: inline-block; font-size: 13px; font-weight: 700; height: 40px; l=
+ine-height: 40px; padding: 0 24px; text-align: center; text-decoration: non=
+e; text-transform: uppercase; vertical-align: middle; color: #fff; backgrou=
+nd-color: rgb(103,58,183);" target=3D"_blank" rel=3D"noopener">View</a></td=
+></tr></tbody></table></td><div itemprop=3D"action" itemscope itemtype=3D"h=
+ttp://schema.org/ViewAction"><meta itemprop=3D"url" content=3D"https://docs=
+.google.com/forms/u/0/d/e/1FAIpQLSeSJutzygpACPOTxin5HRkCsAGJ_Wcw2AtEetIkB-H=
+Sla8clA/viewscore?vc=3D0&c=3D0&w=3D1&flr=3D0&viewscore=3DAE0zAgCfn7V3ha7SFP=
+lUoS03rM4bWW0aJUarMNiE5k3rVnF4If0UbTtzeF7EByu4DQ"><meta itemprop=3D"name" c=
+ontent=3D"View score"></div></tr><tr height=3D"24px"></tr></tbody></table><=
+/div></div></body></html>
+--00000000000021b350061389cc98--
