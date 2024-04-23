@@ -1,0 +1,143 @@
+Delivered-To: srijakaigala@gmail.com
+Received: by 2002:a50:cd1a:0:b0:56e:66f4:e751 with SMTP id z26csp1252316edi;
+        Sat, 20 Apr 2024 09:16:37 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IFyhMGjUYB4dj5QUXjsoZWLRUxMFTLKrKHTdtlJATVODlgk7Htqtds+09FNqkMxqiiDPG4e
+X-Received: by 2002:a05:6870:b513:b0:220:bd1c:6c21 with SMTP id v19-20020a056870b51300b00220bd1c6c21mr6744419oap.39.1713629797253;
+        Sat, 20 Apr 2024 09:16:37 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1713629797; cv=none;
+        d=google.com; s=arc-20160816;
+        b=HYsb9Se/6+HzBdXu3SxNGoP+st4V4dEmToEu4g9L9yqKzYEl2+EAgLswS4x9UFHjzD
+         L9ZYMWZX5/Cae+Q8QTbrCNtXI4Q7eJR8CyGzxNI3vhN3XlkmsZCQCw8OowRL4M64o41G
+         Fo5ugPQsgMRZDra7SfXuSD8/GegdUxWE+Or9Xs0vyN8L8IILPfbrWPSzvZ7KKGDMlDAF
+         GeO/6tcT9kUNr66IQMT8Z+F86lll91axR19u5qjdcWEHgE9GYP7oVMccpw6YzJU5g82C
+         OHnqPvD9uFS/JfOjkHzmEI12uRqhaSQVNBV9X3CrVgWdCfxkEX10T9IP9cyEG+TsVXP5
+         K0VA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:from:subject:date:message-id:feedback-id:mime-version
+         :dkim-signature;
+        bh=nxFDaaNDACRZKop9lw/nvvhL32wn+0Vteg+5bsPxioc=;
+        fh=Xzt2G/1vklCMzx55ZEX8l7RBmOM2JZNRtB0/4BvaA40=;
+        b=HmOSzn4HiVRjnUUSUPUl4FyXbzUR5YazUfZAGKOF7r1jEOK6XTyCAaMDub+acLwQyX
+         rS1Fhx6T24F0sTldNK/YM6f3rlbpnob8c2bgTaxyiwvO+kwqKGN1I/wvj3XsA1tkqoah
+         gsIN119pX06mfBI7XcIii/5asupxkpi68Etr88DKGp9aXlyh/pMzP6mIgd1NKejzswgu
+         a6pWffiRIhxz8EnV0tHpMlJXyPgYAfbLsU3XGM+GSlbnQfTsHC3xFrOvqUTK4D68qNj6
+         vq/T5/VarHWgmOJNxM3jH0o4RUHduViFSD5s+mKcrnTFKurX6KxHee/G0+jOX+F7gUTg
+         0JQQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@thesmartbridge.com header.s=google header.b=VYurOo+T;
+       spf=pass (google.com: domain of 3y-ojzgssdp4ygtjkkvtgoqznkysgxzhxojmk.iusyxopgqgomgrgmsgor.ius@trix.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3Y-ojZgsSDP4ygtjkkvtgoqznkysgxzhxojmk.iusyxopgqgomgrgmsgor.ius@trix.bounces.google.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=thesmartbridge.com
+Return-Path: <3Y-ojZgsSDP4ygtjkkvtgoqznkysgxzhxojmk.iusyxopgqgomgrgmsgor.ius@trix.bounces.google.com>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id b14-20020a05687061ce00b0022ea8b29cc5sor4470947oah.7.2024.04.20.09.16.37
+        for <srijakaigala@gmail.com>
+        (Google Transport Security);
+        Sat, 20 Apr 2024 09:16:37 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 3y-ojzgssdp4ygtjkkvtgoqznkysgxzhxojmk.iusyxopgqgomgrgmsgor.ius@trix.bounces.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@thesmartbridge.com header.s=google header.b=VYurOo+T;
+       spf=pass (google.com: domain of 3y-ojzgssdp4ygtjkkvtgoqznkysgxzhxojmk.iusyxopgqgomgrgmsgor.ius@trix.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3Y-ojZgsSDP4ygtjkkvtgoqznkysgxzhxojmk.iusyxopgqgomgrgmsgor.ius@trix.bounces.google.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=thesmartbridge.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=thesmartbridge.com; s=google; t=1713629797; x=1714234597; dara=google.com;
+        h=to:from:subject:date:message-id:feedback-id:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=nxFDaaNDACRZKop9lw/nvvhL32wn+0Vteg+5bsPxioc=;
+        b=VYurOo+TphkQAbHA/ptuO7oDDDj7I9EyTnC3AkFDMbL7rIEx+F+tCfzXyNl+Tns/Zz
+         IEYrSchqYVZ3wIv2vCoUAlKBnBUF8sx1JArXe4OM48yttXcSHXqWvH8ofhsN/tqP6AxZ
+         dz7hahIorBvlY7ghQKylrvdPX0ZOv1/koKPvc=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1713629797; x=1714234597;
+        h=to:from:subject:date:message-id:feedback-id:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=nxFDaaNDACRZKop9lw/nvvhL32wn+0Vteg+5bsPxioc=;
+        b=AMCJY8r3ZYfFEz+ptQzeN+c+TU3cY1NFODzHHy5gX3xM5n9fSYVEq0GfheRBLyNDVY
+         ATiA8BhDv42aAWgwuhWSURZlajeoU4gZJGAj5SVTi+r+pTtXaqI/Md74nWfuClUpgrEd
+         NCb/uRGqqfp9KNUH34+755qdckIxn9QBbQU0IvvMjmcXfvZqZDXEk7IR9DrZfeBCeGiQ
+         LYp5fLqqv2NakJAhsEMrlJ34Aw2BuX5syCY+887uO17oKk+EiVk2KhGJMlay4/Ljb+TM
+         0kgENMXr9jFkfcgSTTXNd0zNq8NisG9YZbk/HMpDSMbPbyaLEW1oS6DkezkT/B2sgPK6
+         0Emw==
+X-Gm-Message-State: AOJu0Yx8Jk5fAodvHAc0+uT1KVWHSjHrP8Nwkhm+q0XN9zh4O7Biqxuy
+	fj23fV5T6qkr/DoWkKPFCpkP0uHlUYHcuPWoQ4JuDYZb+cYHNKHw12cFLC+sdmSH9LAoNXDiA6P
+	zNyhbWEtqZ0sUbt+RIPqgJvNUmYOe90SutB0JuWcqdw==
+MIME-Version: 1.0
+X-Received: by 2002:a05:6870:9123:b0:22e:ddd1:53ab with SMTP id
+ o35-20020a056870912300b0022eddd153abmt6299022oae.41.1713629795763; Sat, 20
+ Apr 2024 09:16:35 -0700 (PDT)
+Feedback-ID: MailTypeReleaseScore:GoogleForms
+X-GoogleForms-FormId: e/1FAIpQLScZvCmiOVVkGDgtIlI0Ob2AJBLeIJqPouI2ZDrQM176Snb1yQ
+X-GoogleForms-CustomerDisplayName: thesmartbridge
+Message-ID: <autogen-java-3a5ed6a8-77f3-4346-bb66-8821a9017bbf@google.com>
+Date: Sat, 20 Apr 2024 16:16:36 +0000
+Subject: Score released: Salesforce Admin/Developer Grand Assessment  
+From: sandeepnaik@thesmartbridge.com
+To: srijakaigala@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000532ef40616898777"
+
+--000000000000532ef40616898777
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+
+Google Forms
+
+
+Your score has been released for Salesforce Admin/Developer Grand  
+Assessment .
+
+
+
+
+
+Salesforce Admin/Developer Grand Assessment
+
+26 / 30
+
+
+
+
+
+
+View
+
+
+
+--000000000000532ef40616898777
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><body style=3D"font-family: Roboto,Helvetica,Arial,sans-serif; margin=
+: 0; padding: 0; height: 100%; width: 100%;"><table border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" style=3D"background-color:;" width=3D"100%" role=
+=3D"presentation"><tbody><tr height=3D"64px"><td style=3D"padding: 0 24px;"=
+><img alt=3D"Google Forms" height=3D"26px" style=3D"display: inline-block; =
+margin: 0; vertical-align: middle;" width=3D"143px" src=3D"https://www.gsta=
+tic.com/docs/forms/google_forms_logo_lockup_white_2x.png"></td></tr></tbody=
+></table><div style=3D"padding: 24px; background-color:rgb(237,231,246)"><d=
+iv align=3D"center" style=3D"background-color: #fff; border-bottom: 1px sol=
+id #e0e0e0;margin: 0 auto; max-width: 480px; min-width: 154px;padding: 0 24=
+px;"><table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" style=3D"b=
+ackground-color: #fff;" width=3D"100%" role=3D"presentation"><tbody><tr hei=
+ght=3D"24px"></tr><tr><td><div style=3D"color: #424242; font-size: 13px; fo=
+nt-weight: 700; line-height: 13px;">Your score has been released for Salesf=
+orce Admin/Developer Grand Assessment=C2=A0.</div></td></tr><tr height=3D"2=
+4px"></tr><tr><td><div style=3D"color: #424242; font-size: 16px; line-heigh=
+t: 16px; padding-bottom: 8px;">Salesforce Admin/Developer Grand Assessment=
+=C2=A0</div><div style=3D"color: rgb(103,58,183); font-size: 24px; line-hei=
+ght: 24px;"><span style=3D"font-weight: bold;">26</span> / 30</div></td></t=
+r><tr height=3D"24px"></tr><tr><td><table border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" width=3D"100%"><tbody><tr><td><a href=3D"https://docs.googl=
+e.com/forms/u/0/d/e/1FAIpQLScZvCmiOVVkGDgtIlI0Ob2AJBLeIJqPouI2ZDrQM176Snb1y=
+Q/viewscore?vc=3D0&c=3D0&w=3D1&flr=3D0&viewscore=3DAE0zAgDUe9ZCNo4p5T36PGb_=
+q_SJvAYC3fmiIG4TKMr4ezh1wH3pMVFy1naDI44xwQ" style=3D"border-radius: 3px; bo=
+x-sizing: border-box; display: inline-block; font-size: 13px; font-weight: =
+700; height: 40px; line-height: 40px; padding: 0 24px; text-align: center; =
+text-decoration: none; text-transform: uppercase; vertical-align: middle; c=
+olor: #fff; background-color: rgb(103,58,183);" target=3D"_blank" rel=3D"no=
+opener">View</a></td></tr></tbody></table></td><div itemprop=3D"action" ite=
+mscope itemtype=3D"http://schema.org/ViewAction"><meta itemprop=3D"url" con=
+tent=3D"https://docs.google.com/forms/u/0/d/e/1FAIpQLScZvCmiOVVkGDgtIlI0Ob2=
+AJBLeIJqPouI2ZDrQM176Snb1yQ/viewscore?vc=3D0&c=3D0&w=3D1&flr=3D0&viewscore=
+=3DAE0zAgDUe9ZCNo4p5T36PGb_q_SJvAYC3fmiIG4TKMr4ezh1wH3pMVFy1naDI44xwQ"><met=
+a itemprop=3D"name" content=3D"View score"></div></tr><tr height=3D"24px"><=
+/tr></tbody></table></div></div></body></html>
+--000000000000532ef40616898777--
